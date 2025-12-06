@@ -98,6 +98,7 @@ m.fit(prophet_df)
 future = m.make_future_dataframe(periods=365)
 forecast = m.predict(future)
 forecast[['ds','yhat','yhat_lower','yhat_upper']].tail()
+print("# Forecast 365 days into the future (adjust to 12 months)")
 
 # Plot forecast (Prophet built-in)
 fig1 = m.plot(forecast, xlabel='Date', ylabel='Sales')
