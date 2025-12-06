@@ -122,7 +122,7 @@ plt.xlabel("Date")
 plt.ylabel("Revenue ($)")
 plt.legend()
 plt.show()
-
+print("Merge actuals and forecast for plotting")
 # Calculate projected sales for next 12 months from the forecast
 future_only = forecast[forecast['ds'] > prophet_df['ds'].max()]
 projected_next_12m = future_only['yhat'].head(365).sum()
