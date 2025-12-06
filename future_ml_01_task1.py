@@ -84,6 +84,7 @@ centre = plt.Circle((0,0),0.70,fc='white')
 plt.gca().add_artist(centre)
 plt.title("Sales by Category")
 plt.show()
+print(" Donut chart for sales by category")
 
 # Prophet requires columns 'ds' and 'y'
 prophet_df = df[['Date','Sales']].rename(columns={'Date':'ds','Sales':'y'})
