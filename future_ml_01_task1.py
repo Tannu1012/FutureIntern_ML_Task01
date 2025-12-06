@@ -59,6 +59,7 @@ monthly['lag_12'] = monthly['Sales'].shift(12)
 monthly['rmean_3'] = monthly['Sales'].rolling(3).mean()
 monthly = monthly.dropna().reset_index(drop=True)
 monthly.head(5)
+print("lag and rolling features (for ML models)")
 
 # Prepare pivot for category-year stacked area plot
 cat_year = df.copy()
@@ -73,6 +74,7 @@ plt.title("Category Performance Trends (Year Over Year)")
 plt.xlabel("Year")
 plt.ylabel("Revenue ($)")
 plt.show()
+print("pivot for category-year stacked area plot")
 
 # Donut chart for sales by category
 cat_sum = df.groupby('Category')['Sales'].sum().sort_values(ascending=False)
