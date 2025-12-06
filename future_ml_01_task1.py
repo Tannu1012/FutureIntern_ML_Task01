@@ -144,7 +144,7 @@ print("CV MAE (RandomForest):", -scores.mean())
 # Fit final model and predict last 12 months (example)
 model_rf.fit(X, y)
 ml['pred_rf'] = model_rf.predict(X)
-
+print("Fit final model and predict last 12 months")
 # Export forecast and historical CSVs for Power BI
 forecast[['ds','yhat','yhat_lower','yhat_upper']].to_csv('forecast_output.csv', index=False)
 df.to_csv('historical_sales.csv', index=False)
