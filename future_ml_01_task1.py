@@ -134,7 +134,7 @@ ml = monthly.copy().dropna().reset_index(drop=True)
 features = ['month','lag_1','lag_12','rmean_3']
 X = ml[features]
 y = ml['Sales']
-
+print("Prepare ML dataset using monthly aggregated features from earlier")
 # TimeSeriesSplit
 ts = TimeSeriesSplit(n_splits=3)
 model_rf = RandomForestRegressor(n_estimators=100, random_state=42)
