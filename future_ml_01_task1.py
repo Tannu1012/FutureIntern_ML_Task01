@@ -106,6 +106,7 @@ fig1.set_size_inches(20, 10)
 
 fig2 = m.plot_components(forecast)
 fig2.set_size_inches(20, 10)
+print("Plot forecast (Prophet built-in)")
 
 # Merge actuals and forecast for plotting
 pred = forecast[['ds','yhat']].rename(columns={'ds':'Date'})
