@@ -128,7 +128,7 @@ future_only = forecast[forecast['ds'] > prophet_df['ds'].max()]
 projected_next_12m = future_only['yhat'].head(365).sum()
 print("Projected Sales in next 12 months (raw):", projected_next_12m)
 print("Projected Sales in next 12 months (in Millions):", round(projected_next_12m/1e6,2), "M")
-
+print("Calculate projected sales for next 12 months from the forecast")
 # Prepare ML dataset using monthly aggregated features from earlier
 ml = monthly.copy().dropna().reset_index(drop=True)
 features = ['month','lag_1','lag_12','rmean_3']
