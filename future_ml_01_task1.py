@@ -8,7 +8,7 @@ from sklearn.metrics import mean_squared_error, mean_absolute_error
 from prophet import Prophet
 import os
 print("Libraries imported")
-print(" All Libraries imported")
+print("First message")
 
 # Upload 'mock_kaggle.csv' to the Colab files sidebar before running this cell
 DATA_PATH = "/content/mock_kaggle.csv"  # In Colab, uploaded files appear at /content/
